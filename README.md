@@ -180,6 +180,7 @@ Feel free to ask any questions, raise problems, and request new features in [dis
 ## 🙌 Contributing
 
 Thanks go to these awesome contributors
+[kb]
 
 <a href="https://github.com/FlowiseAI/Flowise/graphs/contributors">
 <img src="https://contrib.rocks/image?repo=FlowiseAI/Flowise" />
