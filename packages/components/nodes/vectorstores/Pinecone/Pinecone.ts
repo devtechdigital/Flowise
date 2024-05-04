@@ -171,7 +171,8 @@ class Pinecone_VectorStores implements INode {
         const pineconeApiKey = getCredentialParam('pineconeApiKey', credentialData, nodeData)
 
         const client = new Pinecone({
-            apiKey: pineconeApiKey
+            apiKey: pineconeApiKey,
+            sourceTag: 'flowise'
         })
 
         await client.describeIndex(index)
@@ -190,7 +191,7 @@ class Pinecone_VectorStores implements INode {
 
         const vectorStore = await PineconeStore.fromExistingIndex(embeddings, obj)
 
-        return resolveVectorStoreOrRetriever(nodeData, vectorStore)
+        return resolveVectorStoreOrRetriever(nodeData, vectorStore, obj.filter)
     }
 }
 
